@@ -38,7 +38,7 @@ def react(polymer):
                     # ignore the next element and pass the polymer to the next iteration
                     # If the polarity check returns False, we append the new element to the end
                     # (but because reduce doesn't deal with references, we just create a new list)
-                    x[:-1] if polarity(x[-1], y) else x + [y]
+                    x[:-1] if polarity(x[-1], y) else add_and_return(x, y)
                 ),
                 polymer,
                 []))
@@ -48,6 +48,11 @@ def react(polymer):
 
 def polarity(a, b):
     return a != b and (a.upper() == b or a.lower() == b)
+
+
+def add_and_return(x, y):
+    x.append(y)
+    return x
 
 
 def read_input():
