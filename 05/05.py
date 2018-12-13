@@ -26,7 +26,7 @@ def react(polymer):
 
         # Using reduce, could be replaced with a more readable for-loop, but index problems might arise
         # A while loop would be the easiest to understand, maybe
-        # ... and faster. Lots of lists being created here
+        # ... and faster. Reduces function overhead
         polymer = ''.join(
             reduce(
                 lambda x, y:
