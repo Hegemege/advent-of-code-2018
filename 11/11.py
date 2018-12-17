@@ -44,7 +44,7 @@ def part_2(grid):
     # Not very fast, but gets the solution in 2-3 minutes.
     # The search accelerates
 
-    # Square sum is done with dynamic programming, where a X,Y -based square with size N+1
+    # Square sum is done with dynamic programming, where a X,Y -based square with size N
     # requires only 1 + N-1 + N-1 + 1 sum operations instead of the naive N*N
     # Could be made faster by caching the sum of each square size per axis when moving the square
 
